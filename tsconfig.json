@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node", // Changed from 'bundler' for better server-side resolution
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": ["node"],
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    // --- CRITICAL CHANGES BELOW ---
+    "noEmit": false,             // MUST be false to generate dist/server.js
+    "outDir": "dist",            // Ensures compiled files go to the dist folder
+    "esModuleInterop": true,     // Fixes the "path" import error (TS1259)
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": false // Usually set to false when emitting files
+  },
+  "include": ["server.ts", "src/**/*"], // Ensure server.ts is included in the build
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "personafinance-hub",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+  "dev": "tsx server.ts",
+  "build": "vite build && tsc && cp package.json dist/", 
+  "start": "node dist/server.js",
+  "lint": "eslint . --ext ts,tsx",
+  "preview": "vite preview"
+},
+  "dependencies": {
+    "@azure/cosmos": "^4.9.3",
+    "@google/genai": "^1.4.0",
+    "express": "^5.2.1",
+    "lucide-react": "^1.14.0",
+    "motion": "^12.38.0",
+    "path-browserify": "^1.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
+    "recharts": "^2.15.3",
+    "tsx": "^4.21.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.1",
+    "@typescript-eslint/parser": "^8.59.1",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "typescript": "~5.8.2",
+    "typescript-eslint": "^8.59.1",
+    "vite": "^6.2.0"
+  }
+}
